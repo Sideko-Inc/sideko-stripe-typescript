@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Explicitly control declaration settings
+    "declaration": true,
+    "noEmit": false,
+
+    // Reduce memory usage
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
+    "noPropertyAccessFromIndexSignature": false,
+
+    "skipLibCheck": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo"
+  },
+  "include": ["src"],
+  "exclude": ["test", "**/*.test.ts", "node_modules", "dist"]
+}

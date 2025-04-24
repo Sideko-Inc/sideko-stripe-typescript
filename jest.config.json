@@ -1,0 +1,11 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testPathIgnorePatterns": [
+    "/dist/"
+  ],
+  "moduleNameMapper": {
+    "^@sideko-inc/stripe$": "<rootDir>/src/index.ts",
+    "^@sideko-inc/stripe/(.*)$": "<rootDir>/src/$1"
+  }
+}

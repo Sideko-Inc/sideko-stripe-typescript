@@ -1,0 +1,30 @@
+/**
+ * The customer's bank. Can be one of `ing`, `citi_handlowy`, `tmobile_usbugi_bankowe`, `plus_bank`, `etransfer_pocztowy24`, `banki_spbdzielcze`, `bank_nowy_bfg_sa`, `getin_bank`, `velobank`, `blik`, `noble_pay`, `ideabank`, `envelobank`, `santander_przelew24`, `nest_przelew`, `mbank_mtransfer`, `inteligo`, `pbac_z_ipko`, `bnp_paribas`, `credit_agricole`, `toyota_bank`, `bank_pekao_sa`, `volkswagen_bank`, `bank_millennium`, `alior_bank`, or `boz`.
+ */
+export type PaymentMethodDetailsP24BankEnum =
+  | "alior_bank"
+  | "bank_millennium"
+  | "bank_nowy_bfg_sa"
+  | "bank_pekao_sa"
+  | "banki_spbdzielcze"
+  | "blik"
+  | "bnp_paribas"
+  | "boz"
+  | "citi_handlowy"
+  | "credit_agricole"
+  | "envelobank"
+  | "etransfer_pocztowy24"
+  | "getin_bank"
+  | "ideabank"
+  | "ing"
+  | "inteligo"
+  | "mbank_mtransfer"
+  | "nest_przelew"
+  | "noble_pay"
+  | "pbac_z_ipko"
+  | "plus_bank"
+  | "santander_przelew24"
+  | "tmobile_usbugi_bankowe"
+  | "toyota_bank"
+  | "velobank"
+  | "volkswagen_bank";

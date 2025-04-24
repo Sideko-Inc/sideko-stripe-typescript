@@ -1,0 +1,6 @@
+/**
+ * CustomerSubscriptionModifyBodyPaymentSettingsPaymentMethodOptionsUsBankAccountObj0FinancialConnectionsFiltersAccountSubcategoriesItemEnum
+ */
+export type CustomerSubscriptionModifyBodyPaymentSettingsPaymentMethodOptionsUsBankAccountObj0FinancialConnectionsFiltersAccountSubcategoriesItemEnum =
+  | "checking"
+  | "savings";

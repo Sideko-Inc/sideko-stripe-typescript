@@ -1,0 +1,32 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDir": "src",
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "paths": {
+      "@sideko-inc/stripe": ["src/index.ts"],
+      "@sideko-inc/stripe/*": ["src/*"]
+    },
+
+    // ✅ Still safe but lighter
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    // 🧹 Optional: relax some memory-intensive checks
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
+    "noPropertyAccessFromIndexSignature": false,
+
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  }
+}

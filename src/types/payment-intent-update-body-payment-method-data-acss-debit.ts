@@ -1,0 +1,70 @@
+import { zodTransform } from "@sideko-inc/stripe/core";
+import * as z from "zod";
+
+/**
+ * PaymentIntentUpdateBodyPaymentMethodDataAcssDebit
+ */
+export type PaymentIntentUpdateBodyPaymentMethodDataAcssDebit = {
+  accountNumber: string;
+  institutionNumber: string;
+  transitNumber: string;
+};
+
+/**
+ * @internal
+ * PaymentIntentUpdateBodyPaymentMethodDataAcssDebit without any key transformation, this is what
+ * we expect to come in as network data
+ */
+export type External$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit = {
+  account_number: string;
+  institution_number: string;
+  transit_number: string;
+};
+
+/**
+ * Takes network data, validates it, and transforms keys to match typescript object PaymentIntentUpdateBodyPaymentMethodDataAcssDebit
+ */
+const SchemaIn$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit: z.ZodType<
+  PaymentIntentUpdateBodyPaymentMethodDataAcssDebit, // output type of this zod object
+  z.ZodTypeDef,
+  unknown
+> = z
+  .object({
+    account_number: z.string(),
+    institution_number: z.string(),
+    transit_number: z.string(),
+  })
+  .transform((obj) => {
+    return zodTransform(obj, {
+      account_number: "accountNumber",
+      institution_number: "institutionNumber",
+      transit_number: "transitNumber",
+    });
+  });
+
+/**
+ * @internal
+ * Takes typescript data, validates it, and maps keys to match the expected external object External$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit
+ */
+const SchemaOut$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit: z.ZodType<
+  External$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit, // output type of this zod object
+  z.ZodTypeDef,
+  PaymentIntentUpdateBodyPaymentMethodDataAcssDebit // the object to be transformed
+> = z
+  .object({
+    accountNumber: z.string(),
+    institutionNumber: z.string(),
+    transitNumber: z.string(),
+  })
+  .transform((obj) => {
+    return zodTransform(obj, {
+      accountNumber: "account_number",
+      institutionNumber: "institution_number",
+      transitNumber: "transit_number",
+    });
+  });
+
+export const Schemas$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit = {
+  in: SchemaIn$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit,
+  out: SchemaOut$PaymentIntentUpdateBodyPaymentMethodDataAcssDebit,
+};
