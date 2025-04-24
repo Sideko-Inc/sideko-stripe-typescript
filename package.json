@@ -20,8 +20,8 @@
   ],
   "scripts": {
     "format": "prettier --write 'src/**/*.ts'",
-    "build": "tsc -p tsconfig.build.json && tsc-alias",
-    "test": "jest --testPathPattern=test --maxWorkers=1",
+    "build": "NODE_OPTIONS='--max_old_space_size=8192' tsc -p tsconfig.build.json && tsc-alias",
+    "test": "jest --testPathPattern=test --maxWorkers=50%",
     "prepare": "npm run build"
   },
   "dependencies": {

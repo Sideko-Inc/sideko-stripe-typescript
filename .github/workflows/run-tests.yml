@@ -27,8 +27,6 @@ jobs:
       #  -----  install dependencies -----
       #---------------------------------------------------------------
       - name: install dependencies
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
         run: npm install
       #------------------------------
       #  -----  run tests -----
